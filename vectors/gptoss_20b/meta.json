@@ -1,0 +1,28 @@
+{
+ "model": "openai/gpt-oss-20b",
+ "n_blocks": 24,
+ "hidden": 2880,
+ "analysis_layers": [
+  6,
+  8,
+  10,
+  12,
+  14,
+  15,
+  16,
+  18,
+  20,
+  22,
+  23
+ ],
+ "cfg": {
+  "start_at_nth_token": 50,
+  "batch_size": 8,
+  "max_length": 1024,
+  "neutral_pca_variance": 0.5,
+  "neutral_tokens_for_pca": 40000,
+  "heldout_frac": 0.1,
+  "analysis_layer_stride": 2,
+  "analysis_layer_min": 6
+ }
+}
