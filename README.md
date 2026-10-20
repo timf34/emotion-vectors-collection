@@ -29,7 +29,7 @@ in this repo under `vectors/<folder>/`. Raw vectors, neutral PCA bases and gguf 
 | [`olmo2_32b`](https://huggingface.co/datasets/timf34/emotion-vectors/tree/main/olmo2_32b) | [allenai/OLMo-2-0325-32B-Instruct](https://huggingface.co/allenai/OLMo-2-0325-32B-Instruct) | 64 × 5120 | Gemma 3 IT's | 36 (0.927) |
 | [`glm45_air`](https://huggingface.co/datasets/timf34/emotion-vectors/tree/main/glm45_air) | [zai-org/GLM-4.5-Air](https://huggingface.co/zai-org/GLM-4.5-Air) | 46 × 4096 | Gemma 3 IT's | 18 (0.924) |
 | [`gptoss_20b`](https://huggingface.co/datasets/timf34/emotion-vectors/tree/main/gptoss_20b) | [openai/gpt-oss-20b](https://huggingface.co/openai/gpt-oss-20b) | 24 × 2880 | Gemma 3 IT's | 14 (0.914) |
-| `qwen36_27b` | [Qwen/Qwen3.6-27B](https://huggingface.co/Qwen/Qwen3.6-27B) | 64 × 5120 | Gemma 3 IT's | in progress |
+| [`qwen36_27b`](https://huggingface.co/datasets/timf34/emotion-vectors/tree/main/qwen36_27b) | [Qwen/Qwen3.6-27B](https://huggingface.co/Qwen/Qwen3.6-27B) | 64 × 5120 | Gemma 3 IT's | 40 (0.925) |
 | `qwen38_27b` | [Qwen/Qwen3.8-27B](https://huggingface.co/Qwen/Qwen3.8-27B) | 64 × 5120 | Gemma 3 IT's | in progress |
 
 "Best layer" is the denoised layer with the highest mean one-vs-rest AUC across the 42 emotions on held-out
@@ -55,9 +55,9 @@ physical_illness_fatigue, anxiety_panic, frustration_blocked_goal.
 | `neutral_pca.pt` | per-layer neutral-text principal components used for denoising |
 | `heldout_auc_{emotions,syndromes}.csv` | held-out one-vs-rest AUC per label × layer × {raw, dn} |
 | `meta.json` | HF model id, block count, hidden size, analysis layers, extraction config |
-| `gguf/` | repeng-style control vectors (`direction.<layer>`) for llama.cpp / EasySteer (Gemma 3 / 4 folders only) |
+| `gguf/` | repeng-style control vectors (`direction.<layer>`) for llama.cpp / EasySteer (Gemma 3 / 4 and Qwen 3.6 / 3.8 folders) |
 
-`gemma3_27b_no2733` has only the denoised emotion vectors. `gemma2_27b` and the cross-family folders have no `gguf/`.
+`gemma3_27b_no2733` has only the denoised emotion vectors. `gemma2_27b` and the other cross-family folders have no `gguf/`.
 
 **Layer convention:** `layer = b` is the residual stream *after* decoder block `b` (0-based), i.e.
 `hidden_states[b + 1]` in HuggingFace.
