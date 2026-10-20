@@ -30,7 +30,7 @@ in this repo under `vectors/<folder>/`. Raw vectors, neutral PCA bases and gguf 
 | [`glm45_air`](https://huggingface.co/datasets/timf34/emotion-vectors/tree/main/glm45_air) | [zai-org/GLM-4.5-Air](https://huggingface.co/zai-org/GLM-4.5-Air) | 46 × 4096 | Gemma 3 IT's | 18 (0.924) |
 | [`gptoss_20b`](https://huggingface.co/datasets/timf34/emotion-vectors/tree/main/gptoss_20b) | [openai/gpt-oss-20b](https://huggingface.co/openai/gpt-oss-20b) | 24 × 2880 | Gemma 3 IT's | 14 (0.914) |
 | [`qwen36_27b`](https://huggingface.co/datasets/timf34/emotion-vectors/tree/main/qwen36_27b) | [Qwen/Qwen3.6-27B](https://huggingface.co/Qwen/Qwen3.6-27B) | 64 × 5120 | Gemma 3 IT's | 40 (0.925) |
-| `qwen38_27b` | [Qwen/Qwen3.8-27B](https://huggingface.co/Qwen/Qwen3.8-27B) | 64 × 5120 | Gemma 3 IT's | in progress |
+| [`qwen38_27b`](https://huggingface.co/datasets/timf34/emotion-vectors/tree/main/qwen38_27b) | [Qwen/Qwen3.8-27B](https://huggingface.co/Qwen/Qwen3.8-27B) | 64 × 5120 | Gemma 3 IT's | 40 (0.925) |
 
 "Best layer" is the denoised layer with the highest mean one-vs-rest AUC across the 42 emotions on held-out
 stories (chance = 0.5). Per-label, per-layer numbers are in each folder's `heldout_auc_emotions.csv`.
